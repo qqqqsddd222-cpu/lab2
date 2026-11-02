@@ -5,7 +5,7 @@ WHERE (cod_f LIKE 'М%' OR cod_f LIKE '1%')
   AND curator IS NULL;
 
 -- 2. Выбрать телефоны преподавателей, являющихся кураторами групп
-SELECT t.last_name, t.first_name, t.contact_phone_
+SELECT t.contact_phone_
 FROM teachers t
 JOIN "group" g ON t.teacher_code = g.curator;
 
