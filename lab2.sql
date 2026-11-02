@@ -88,8 +88,8 @@ WHERE group_id IS NOT NULL
 
 -- 7. Посчитать количество преподавателей, имеющих высшее образование, работающих на каждой кафедре
 SELECT 
-    department_nur AS "Кафедра", 
-    COUNT(*) AS "Количество преподавателей с высшим образованием"
+    department_nur AS Кафедра, 
+    COUNT(*) AS Количество_преподавателей_с_высшим_образованием
 FROM teachers
 WHERE ex = 'высшее'
 GROUP BY department_nur;
