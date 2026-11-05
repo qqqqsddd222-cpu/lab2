@@ -1,3 +1,10 @@
+-- ДОБАВЛЯЕМ НЕДОСТАЮЩИЙ СТОЛБЕЦ СТАЖА (чтобы не было ошибки t.experience)
+ALTER TABLE teachers ADD COLUMN IF NOT EXISTS experience INTEGER DEFAULT 0;
+UPDATE teachers SET experience = 12 WHERE teacher_code = 1;
+UPDATE teachers SET experience = 5  WHERE teacher_code = 2;
+UPDATE teachers SET experience = 8  WHERE teacher_code = 3;
+UPDATE teachers SET experience = 15 WHERE teacher_code = 4;
+
 -- 1. Выбрать все группы 1 курса математического факультета, у которых нет куратора
 SELECT * 
 FROM "group" 
